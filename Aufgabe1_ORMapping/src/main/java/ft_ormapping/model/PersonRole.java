@@ -2,10 +2,7 @@ package ft_ormapping.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 @Entity
@@ -14,6 +11,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"identifier"})
 })
+@Setter
 public class PersonRole extends AbstractPersistable<Long> {
 
     @ManyToOne(cascade = CascadeType.PERSIST)

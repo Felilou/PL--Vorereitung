@@ -2,14 +2,12 @@ package ft_ormapping.model;
 
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
+@Setter
 public class Student extends PersonRole {
 
     @NotNull
